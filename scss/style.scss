@@ -6,6 +6,8 @@
 
 $index: calc(1vw + 1vh);
 $text: #e7e7e0;
+$main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+$transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 
 @font-face {
    font-family: raleway_f;
@@ -60,17 +62,20 @@ body {
 
 .layers__base {
    transform: translate3d(0, calc(var(--scrollTop) / 1.75), 0);
+   transition: $transition;
    z-index: 0;
 }
 
 .layers__middle {
    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+   transition: $transition;
    z-index: 2;
 
 }
 
 .layers__front{
    transform: translate3d(0, calc(var(--scrollTop) / 5.8), 0);
+   transition: $transition;
    z-index: 3;
 
 }
@@ -83,11 +88,14 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   position: relative;
+   text-align: center;
 }
 
 .layers__header {
    z-index: 1;
    transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+   transition: $transition;
    will-change: transform;
    text-transform: uppercase;
    font-weight: 900;
@@ -109,4 +117,28 @@ body {
 .main-article__header {
    text-transform: uppercase;
    font-size: calc($index * 1.8);
+   letter-spacing: calc($index * .55);
+   transform: $main-article-transform;
+   transition: $transition;
+   will-change: transform;
+}
+
+.main-article__paragraph {
+   max-width: calc($index * 30);
+   font-size: calc($index * .85);
+   margin-top: calc($index / 1.25);
+   transform: $main-article-transform;
+   transition: $transition;
+   will-change: transform;
+}
+.copy {
+   position: absolute;
+   bottom: calc($index * 2.5);
+   opacity: .4;
+   font-size: calc($index * .75);
+   letter-spacing: calc($index * .175);
+}
+
+.content {
+   will-change: transform;
 }

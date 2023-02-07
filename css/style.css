@@ -64,18 +64,33 @@ body {
 .layers__base {
   -webkit-transform: translate3d(0, calc(var(--scrollTop) / 1.75), 0);
           transform: translate3d(0, calc(var(--scrollTop) / 1.75), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  -o-transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
   z-index: 0;
 }
 
 .layers__middle {
   -webkit-transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
           transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  -o-transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
   z-index: 2;
 }
 
 .layers__front {
   -webkit-transform: translate3d(0, calc(var(--scrollTop) / 5.8), 0);
           transform: translate3d(0, calc(var(--scrollTop) / 5.8), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  -o-transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
   z-index: 3;
 }
 
@@ -93,12 +108,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  text-align: center;
 }
 
 .layers__header {
   z-index: 1;
   -webkit-transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
           transform: translate3d(0, calc(var(--scrollTop) / 2), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  -o-transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
   will-change: transform;
   text-transform: uppercase;
   font-weight: 900;
@@ -120,4 +142,39 @@ body {
 .main-article__header {
   text-transform: uppercase;
   font-size: calc((1vw + 1vh) * 1.8);
+  letter-spacing: calc((1vw + 1vh) * 0.55);
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  -o-transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  will-change: transform;
+}
+
+.main-article__paragraph {
+  max-width: calc((1vw + 1vh) * 30);
+  font-size: calc((1vw + 1vh) * 0.85);
+  margin-top: calc((1vw + 1vh) / 1.25);
+  -webkit-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+          transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  -o-transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  will-change: transform;
+}
+
+.copy {
+  position: absolute;
+  bottom: calc((1vw + 1vh) * 2.5);
+  opacity: 0.4;
+  font-size: calc((1vw + 1vh) * 0.75);
+  letter-spacing: calc((1vw + 1vh) * 0.175);
+}
+
+.content {
+  will-change: transform;
 }

@@ -10,6 +10,7 @@
     <script src="../libs/gsap/gsap.min.js" defer></script>
     <script src="../libs/gsap/ScrollSmoother.min.js" defer></script>
     <script src="../libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="../libs/particles/particles.js" defer></script>
 
     <script src="../js/scrypt.js" defer></script>
   </head>
@@ -29,17 +30,37 @@
             <div
               class="layer layers__middle"
               style="background-image: url(../img/layer-middle.png)"
-            ></div>
+            >
+              <canvas
+                class="particles"
+                data-color="#fdc13f"
+                data-radius="1.5"
+                data-number="200"
+              ></canvas>
+            </div>
             <div
               class="layer layers__front"
               style="background-image: url(../img/layer-front.png)"
-            ></div>
+            >
+              <canvas
+                class="particles"
+                data-color="#9e7d35"
+                data-radius="3.3"
+                data-number="50"
+              ></canvas>
+            </div>
           </div>
         </header>
         <article
           class="main-article"
           style="background-image: url(../img/dungeon.jpg)"
         >
+          <canvas
+            class="particles test"
+            data-color="#576766"
+            data-radius="3.3"
+            data-number="75"
+          ></canvas>
           <div class="main-article__content">
             <h2 class="main-article__header">The Cave...</h2>
             <p class="main-article__paragraph">
@@ -53,7 +74,7 @@
               make it possible to find answers to many questions of interest to
               scientists. Caves as a unique object of nature constantly attract
               researchers. The first mentions of caves are already found in the
-              writings of Herodotus, Strabo and Pausanias. ©
+              writings of Herodotus, Strabo and Pausanias.
             </p>
           </div>
           <div class="copy">© WebDev fenn1ks</div>

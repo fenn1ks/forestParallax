@@ -125,7 +125,7 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   color: #e7e7e0;
-  text-shadow: 0 0 25px #9e7d35;
+  text-shadow: 0 0 25px #fdc13f;
 }
 
 .layers__title {
@@ -177,4 +177,10 @@ body {
 
 .content {
   will-change: transform;
+}
+
+.test {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }

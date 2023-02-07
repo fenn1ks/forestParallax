@@ -100,7 +100,7 @@ body {
    text-transform: uppercase;
    font-weight: 900;
    color: $text;
-   text-shadow: 0 0 25px #9e7d35;
+   text-shadow: 0 0 25px #fdc13f;
 }
 
 .layers__title {
@@ -112,6 +112,10 @@ body {
    font-size: calc($index / 1.75);
    letter-spacing: calc($index / 3.5);
    margin-top: calc($index * .55);
+}
+
+.main-article__content {
+
 }
 
 .main-article__header {
@@ -141,4 +145,10 @@ body {
 
 .content {
    will-change: transform;
+}
+
+.test {
+   width: 100%;
+   height: 100%;
+   position: absolute;
 }
